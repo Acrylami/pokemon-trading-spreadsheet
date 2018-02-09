@@ -897,6 +897,7 @@ function displayPokemon(){
                 // Pokémon Name
                 var event = $this.data("event");
                 var name = $this.data("name");
+                //Should draw the shiny sprite after the name...
                 if ($this.data("isshiny")) name = name + " ★";
                 var gender = $this.data("gender");
                 if (gender == "F") {
@@ -912,7 +913,8 @@ function displayPokemon(){
                 if (nickname) {
                     name = nickname + " (" + name + ")";
                 }
-                line += "<span class=\"event\">| " + event + " |</span>";
+                //This is where the reddit table data is drawn.. i think
+                line += "<span class=\"event\">| " + event + " </span>";
                 line += "<span class=\"name\">| " + name + " |</span>";
                 // Trainer
                 line += "<span class=\"trainer\"> " + $this.data("ot") + " (" + $this.data("tid") + ")" + " |</span>";
